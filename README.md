@@ -1,5 +1,6 @@
-will be compilable simply with "make"
-can be cleaned with "make clean"
+An interactive online retail interface at the terminal with an item search where users can add products to their cart. Loosely coupled view and buy cart features.
 
-tested with "./amazon filename.txt"
-in this case, "./amazon database.txt"
+Can be compilable with "make" and clean files with "make clean".
+
+Tested with "./amazon filename.txt" if provided with seperate database that follows format.
+Tested personally with "./amazon database.txt".
