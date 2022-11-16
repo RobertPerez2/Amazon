@@ -26,15 +26,12 @@ int main(int argc, char* argv[])
         return 1;
     }
 
-    /****************
-     * Declare your derived DataStore object here replacing
-     *  DataStore type to your derived type
-     ****************/
+    // Declared derived DataStore object here replacing
     MyDataStore ds;
 
 
 
-    // Instantiate the individual section and product parsers we want
+    // Instantiate the individual section and product parsers
     ProductSectionParser* productSectionParser = new ProductSectionParser;
     productSectionParser->addProductParser(new ProductBookParser);
     productSectionParser->addProductParser(new ProductClothingParser);
@@ -46,7 +43,7 @@ int main(int argc, char* argv[])
     parser.addSectionParser("products", productSectionParser);
     parser.addSectionParser("users", userSectionParser);
 
-    // Now parse the database to populate the DataStore
+    // Parse the database to populate the DataStore
     if( parser.parse(argv[1], ds) ) {
         cerr << "Error parsing!" << endl;
         return 1;
